@@ -1,4 +1,4 @@
-package Leetcode;
+package LeetCode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ public class Solution15 {
         Arrays.sort(nums);//排序
         List<List<Integer>> ls = new ArrayList<>();
         for (int i = 0; i < nums.length - 2; i++) {
-            if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) {  // 跳过重复的nums[i]
+            if (i == 0 || (nums[i] != nums[i - 1])) {  // 跳过重复的nums[i]
                 int l = i + 1, r = nums.length - 1, sum = 0 - nums[i];
                 while (l < r) {
                     if (nums[l] + nums[r] == sum) {
