@@ -26,7 +26,7 @@ public class Solution20 {
                     stack[top++] = s.charAt(i);
                 }
                 else {
-                    if(top == 0) {//右括号多
+                    if(top == 0) {
                         System.out.println("右括号多");
                         return false;
                     }

@@ -1,4 +1,4 @@
-package Leetcode;
+package LeetCode;
 
 public class Solution1 {
     //1.两数之和

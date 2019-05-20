@@ -13,11 +13,11 @@ public class Solution63 {
                     obstacleGrid[i][j] = 0;
                     continue;//很重要，使得一个点只会被判断进行一次操作
                 }
-                if(i==0 && j==0){//操作起点
+                if(i == 0 && j == 0){//操作起点
                     obstacleGrid[i][j] = 1;
                     continue;
                 }
-                if(i==0 || j==0){//操作边缘点（如果遇到有障碍点，则后面的点都为0）
+                if(i == 0 || j == 0){//操作边缘点（如果遇到有障碍点，则后面的点都为0）
                     obstacleGrid[i][j] = i == 0?obstacleGrid[i][j-1]:obstacleGrid[i-1][j];
                     continue;
                 }
