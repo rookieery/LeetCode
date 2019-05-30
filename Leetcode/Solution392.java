@@ -28,4 +28,31 @@ public class Solution392 {
         }
         return false;
     }
+    public boolean isSubsequence1(String s, String t) {
+        if (s.length() == 0) {
+            return true;
+        }
+        int count = 0;
+        for (int i = 0; i < t.length(); i++) {
+            if (s.charAt(count) == t.charAt(i)) {
+                count++;
+            }
+            if (count == s.length()) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public boolean isSubsequence2(String s, String t) {
+        int index = 0;
+        char[] ch = s.toCharArray();
+        for (int i = 0; i < ch.length; i++) {
+            index = t.indexOf(ch[i],index);
+            if (index == -1) {
+                return false;
+            }
+            index++;
+        }
+        return true;
+    }
 }
