@@ -12,14 +12,15 @@ public class Solution64 {
         }
         int m = grid.length;
         int n = grid[0].length;
-        int[][] dp = new int[m + 1][n + 1];
+        int[][] dp = new int[m + 1][n + 1];//扩边
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (i == 0) {
-                    dp[i + 1][j + 1] = grid[i][j] + dp[i + 1][j];
+                    dp[i + 1][j + 1] = grid[i][j] + dp[i + 1][j];//边界处理
                 } else if (j == 0) {
-                    dp[i + 1][j + 1] = grid[i][j] + dp[i][j + 1];
+                    dp[i + 1][j + 1] = grid[i][j] + dp[i][j + 1];//边界处理
                 } else {
+                    //状态转移方程方程
                     dp[i + 1][j + 1] = grid[i][j] + Math.min(dp[i][j + 1], dp[i + 1][j]);
                 }
             }
