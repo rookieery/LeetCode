@@ -44,6 +44,7 @@ public class Queen8 {
         judgeCount++;
         for (int i = 0; i < n; i++) {
             //一维数组，不可能在同一行
+            //判断是否在同一行或者同一列
             if (array[i] == array[n] || Math.abs(n - i) == Math.abs(array[n] - array[i])) {
                 return false;
             }

@@ -47,7 +47,7 @@ public class MiGong {
             return true;
         } else {
             if (map[i][j] == 0) {
-                map[i][j] = 2;
+                map[i][j] = 2;//先假设此处可以通走
                 if (setWay(map, i + 1, j)) {
                     return true;
                 } else if (setWay(map, i, j + 1)) {
@@ -57,7 +57,7 @@ public class MiGong {
                 } else if (setWay(map, i, j - 1)) {
                     return true;
                 } else {
-                    map[i][j] = 3;
+                    map[i][j] = 3;//发现此路不通，修改之前的判断值
                     return false;
                 }
             } else {
