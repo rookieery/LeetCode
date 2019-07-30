@@ -26,6 +26,7 @@ public class Solution300 {
         }
         return maxLength;
     }
+
     //二分查找
     public static int lengthOfLIS1(int[] nums) {
         int len = nums.length;
