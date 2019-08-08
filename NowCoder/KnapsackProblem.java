@@ -1,5 +1,7 @@
 package NowCoder;
 
+import java.util.Arrays;
+
 public class KnapsackProblem {
     public static void main(String[] args) {
         int[] w = {1, 4, 3};//物品的重量
