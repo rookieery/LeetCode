@@ -18,11 +18,11 @@ public class Solution198 {
             return nums[0];
         }
         if(nums.length == 2) {
-            return nums[0]>nums[1]?nums[0]:nums[1];
+            return Math.max(nums[0], nums[1]);
         }
         if(nums.length == 3) {
             int tmp = nums[0]+nums[2];
-            return tmp>nums[1]?tmp:nums[1];
+            return Math.max(tmp, nums[1]);
         }
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
@@ -42,7 +42,7 @@ public class Solution198 {
             return nums[0];
         }
         if(nums.length == 2) {
-            return nums[0]>nums[1]?nums[0]:nums[1];
+            return Math.max(nums[0], nums[1]);
         }
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
