@@ -11,6 +11,7 @@ public class Solution56 {
     public int[][] merge(int[][] intervals) {
         int[][] arr = new int[intervals.length][];
         int j = 0;
+        //按照左边界值进行升序排序
         Arrays.sort(intervals, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
