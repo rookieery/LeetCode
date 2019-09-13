@@ -28,6 +28,7 @@ public class Solution392 {
         }
         return false;
     }
+
     public boolean isSubsequence1(String s, String t) {
         if (s.length() == 0) {
             return true;

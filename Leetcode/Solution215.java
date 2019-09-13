@@ -23,6 +23,7 @@ public class Solution215 {
         }
         int n = max - min;
         int[] bucket = new int[n + 1];
+        //3,5,1,7,3,9
         for (int i = 0; i < nums.length; i++) {
             int tmp = nums[i] - min;
             bucket[tmp]++;
