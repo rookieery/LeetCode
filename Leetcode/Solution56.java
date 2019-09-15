@@ -12,6 +12,7 @@ public class Solution56 {
         int[][] arr = new int[intervals.length][];
         int j = 0;
         //按照左边界值进行升序排序
+        //[[1,3],[2,6],[8,10],[15,18]]
         Arrays.sort(intervals, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {

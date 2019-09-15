@@ -8,6 +8,22 @@ public class Solution128 {
      * 给定一个未排序的整数数组，找出最长连续序列的长度。
      * 要求算法的时间复杂度为 O(n)。
      */
+    //1,2,3,4,100
+    public int longestConsecutive4(int[] nums) {
+        Arrays.sort(nums);
+        int max = Integer.MIN_VALUE;
+        int count = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i]-nums[i-1]==1) {
+                count++;
+            } else {
+                max = Math.max(max,count);
+                count = 1;
+            }
+        }
+        return max;
+    }
+
     //计数排序  {2147483646, -2147483647, 0, 2, 2147483644, -2147483645, 2147483645}
     public int longestConsecutive(int[] nums) {
         if (nums.length == 0) {
@@ -15,6 +31,7 @@ public class Solution128 {
         }
         int max = nums[0];
         int min = nums[0];
+        //O(n)
         for (int num : nums) {
             max = Math.max(max, num);
             min = Math.min(min, num);
@@ -22,6 +39,7 @@ public class Solution128 {
         int d = max - min;
         int[] arr = new int[d + 1];
         for (int num : nums) {
+            //1,2,2,3,3,4,100
             arr[num - min]++;
         }
         int count = 0;
